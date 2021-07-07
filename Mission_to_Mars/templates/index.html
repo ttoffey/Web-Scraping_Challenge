@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Mission to Mars</title>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+
+</head>
+
+<body>
+  <div class="container">
+    <div class="jumbotron text-center">
+      <h1>Mission to Mars</h1>
+      <p><a class="btn btn-primary btn-lg" href="/scrape" role="button">Scrape New Data</a></p>
+    </div>
+
+    <div class="row" id="latest_news">
+    </div>
+
+    <div class="row">
+      <h4 class="heading"><strong>Latest Mars News</strong></h4>
+    </div>
+
+    <div class="row">
+      <large><strong>{{mars_info.title}}</strong></large>
+    </div>
+    <div class="row">
+      <medium>{{mars_info.headline}}</medium>
+    </div>
+    <br>
+    <div class="row">
+      <div class="container">
+        <div class="col-md-6">
+
+          <h4 class="heading" , ALIGN="left"><strong>Featured Mars Image</strong></h4>
+        </div>
+        <div class="col-md-5">
+          <h4 class="heading"><strong>Mars Facts</strong></h4>
+        </div>
+      </div>
+    </div>
+    <div class="row">
+
+      <div class="col-md-6">
+        <img src="{{ mars_info.image }}" class="img-fluid" ALIGN="left" style="max-width: 90%" alt="Mars">
+      </div>
+      <div class="col-md-6">
+        <table class="table table-bordered table-hover table-condensed table-striped">
+          <thead>
+            <tr style="text-align: right;">
+              <th></th>
+              <th>Mars</th>
+              <th>Earth</th>
+            </tr>
+
+          </thead>
+          <tbody>
+            <tr>
+              <th>Description</th>
+              <td></td>
+              <td></td>
+            </tr>
+            <tr>
+              <th>Mars - Earth <br>Comparison</th>
+              <td>Mars</td>
+              <td>Earth</td>
+            </tr>
+            <tr>
+              <th>Diameter:</th>
+              <td>6,779 km</td>
+              <td>12,742 km</td>
+            </tr>
+            <tr>
+              <th>Mass:</th>
+              <td>6.39 × 10^23 kg</td>
+              <td>5.97 × 10^24 kg</td>
+            </tr>
+            <tr>
+              <th>Moons:</th>
+              <td>2</td>
+              <td>1</td>
+            </tr>
+            <tr>
+              <th>Distance from Sun: </th>
+              <td>227,943,824 km</td>
+              <td>149,598,262 km</td>
+            </tr>
+            <tr>
+              <th>Length of Year:</th>
+              <td>687 Earth days</td>
+              <td>365.24 days</td>
+            </tr>
+            <tr>
+              <th>Temperature:</th>
+              <td>-87 to -5 °C</td>
+              <td>-88 to 58°C</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      </row>
+
+    </div>
+  </div>
+  <div class="container fluid">
+    <h4 class="heading" style="text-align: center"><strong>Mars Hemispheres</strong></h4>
+    <hr>
+
+    <div class="row no-gutters">
+      
+      <div class="col-md-3" >
+
+        <div class="card border-primary mb-4" style="max-width: 25rem;">
+
+          <img class="card-img-top" src=" {{ mars_info.picture_urls[0] }} " style="max-width: 100%" alt="Cerebus">
+          <div class="card-body">
+
+            <p class="card-text" style="max-width: 50%"> <strong>{{mars_info.picture_titles[0]}}</strong></p>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-md-3">
+        <div class="card border-primary mb-4" style="width: 25rem;">
+          <img class="card-img-top" src=" {{ mars_info.picture_urls[1] }} " style="max-width: 100%" alt="Shciaparelli">
+          <div class="card-body">
+            <p class="card-text" style="max-width: 50%"><strong>{{mars_info.picture_titles[1]}}</strong></p>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-3">
+        <div class="card border-primary mb-4" style="width: 25rem;">
+          <img class="card-img-top" src=" {{ mars_info.picture_urls[2] }} " style="max-width: 100%" alt="Syrtis">
+          <div class="card-body">
+            <p class="card-text" style="max-width: 50%"><strong>{{mars_info.picture_titles[2]}}</strong></p>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-3" >
+
+        <div class="card border-primary mb-4" style="width: 25rem;">
+          <img class="card-img-top" src=" {{ mars_info.picture_urls[3] }} " style="max-width: 100%"
+            alt="Valles Marineris">
+          <div class="card-body">
+            <p class="card-text" style="max-width: 70%"><strong>{{mars_info.picture_titles[3]}}</strong></p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <style>
+    .border-primary {
+      border: 2px solid lightgrey;
+    }
+
+    .card-text {
+      font-size: medium;
+    }
+    
+    #body {
+      height: 100%;
+      width: 100%;
+    }
+    
+  </style>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-gtEjrD/SeCtmISkJkNUaaKMoLD0//ElJ19smozuHV6z3Iehds+3Ulb9Bn9Plx0x4"
+    crossorigin="anonymous"></script>
+
+</body>
+
+</html>
