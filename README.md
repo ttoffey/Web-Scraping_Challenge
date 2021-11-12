@@ -35,4 +35,7 @@ Sometimes, the first time you run the app, some or all of the scraped pages stay
 
 Also had problem referencing Mongo Database to pull information from the hemisphere's list (the dictionary for each hemisphere). 
 
+- - -
+
+© 2021 Trilogy Education Services, LLC, a 2U, Inc. brand. Confidential and Proprietary. All Rights Reserved.
 
